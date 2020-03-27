@@ -1,0 +1,535 @@
+html{
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  background-color: #0A090A;
+  color: white;
+  background-image: url(../images/main-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  font-family: Roboto;
+}
+
+.container{
+  max-width: 1140px; /* Максимальная ширина */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto; /* Выравниваем по центру */
+}
+
+.header{ /* Стилт для шапки */
+  display: flex;
+  align-items: center; /* Выравнивания по центру по вертикали */
+  justify-content: space-between; 
+  padding-top: 45px; /* Внутренний отступ сверху */
+  margin-bottom: 30%;
+}
+
+.logo{
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 900;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  flex: 0.8;
+}
+
+.search-input{
+  flex: 1; 
+  background: rgba(196, 196, 196, 0.5); /* Фоновый цвет */
+  border-radius: 5px; /* Скругления */
+  padding-top: 12px; /* Внутренний отступ сверху */
+  padding-bottom: 12px; /* Внутренний отступ снизу */
+  padding-left: 18px; /* Внутренний отступ от левого края */
+  border: none; /* Убираем рамку */
+  font-size: 14px;
+  line-height: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type="search"]::-webkit-input-placeholder { /* Chrome */
+  color: #AEAEAE;
+}
+
+input[type="search"]:-ms-input-placeholder { /* IE 10+ */
+  color: #AEAEAE; 
+}
+
+.search-button{
+  background-color: transparent;
+  border: none;
+  padding: 10px 18px;
+}
+
+.bookmark{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+}
+
+.avatar{
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.title-en{
+  font-size: 20px;
+  line-height: 23px;
+  color: #787878;
+  display: inline-block;
+  margin-bottom: 38px;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-info{
+  display: flex;
+  align-items: center;
+}
+
+.tag{
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.country{
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 33px;
+}
+
+.play{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.play::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/play.svg);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: center center;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.more{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.more::after{
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/play.svg);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: center center;
+  border-radius: 50%;
+  margin-left: 16px;
+  transform: rotate(90deg);
+}
+
+.content{
+  margin-top: 11%;
+  background-color: #fff;
+  border-radius: 3px;
+  color: #000;
+  padding: 3% 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.poster{
+  display: block;
+  margin-top: -40%;
+}
+
+.button{
+  background: #FF8F27;
+  padding: 10px 43px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.actors-title{
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding-left: 15px;
+}
+
+.actors-list {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: underline;
+  line-height: 24px;
+}
+
+.full-info{
+  flex: 0.95;
+} 
+
+.short-info{
+  margin-right: 3%;
+}
+
+.tabs-item:not(:last-child){
+  margin-right: 4.7%;
+}
+
+.full-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs{
+  display: flex;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.tabs-content{
+  display: none;
+  margin-right: 70px;
+}
+
+.visible{
+  display: block;
+}
+
+.tabs-item{
+  color: #000;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  /* margin-right: 5%; */
+  padding-left: 0;
+}
+
+
+.tabs-item-active{
+  color: #FF8F27;
+}
+
+.text{
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0;
+}
+
+.subscrible-title{
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 0;
+}
+
+.subscribe-form{
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.subscribe-input{
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 5px 0px 0px 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  border: none;
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.subscribe-button{
+  background: #FF8F27;
+  border-radius: 0px 5px 5px 0px;
+  padding: 12px;
+  border: none;
+}
+
+                                /* ----------- ШИРИНА - 1200 PX ---------------*/
+
+@media (max-width: 1200px) {
+  .container{
+  max-width: 960px;
+  }
+  .tabs-item{
+    font-size: 16px;
+  }
+  .tabs-item:not(:last-child){
+    margin-right: 3.5%;
+  }
+}
+
+                                /* ----------- ШИРИНА - 992 PX ---------------*/
+
+@media (max-width: 992px) {
+  .container{
+    max-width: 740px;
+  }
+  .tabs{
+    flex-wrap: wrap;
+  }
+  .tabs-item{
+    line-height: 30px;
+    flex-basis: 20%;
+  }
+  .full-content{
+    flex-wrap: wrap;
+  }
+  .tabs-content{
+    margin-bottom: 5%;
+  }
+  .text{
+    font-size: 14px;
+  }
+  .actors-list{
+    font-size: 14px;
+  }
+}
+
+                                /* ----------- ШИРИНА - 768 PX ---------------*/
+
+@media (max-width: 768px) {
+  .container{
+    max-width: 540px;
+  }
+  .more{
+    display: none;
+  }
+  .tabs-item{
+    flex-basis: 33%;
+  }
+  .poster{
+    margin-top: -25%;
+  }
+  .info{
+    display: block;
+  }
+  .play {
+    margin-left: 16%;
+  }
+  .tabs-content{
+    margin-right: 0;
+  }
+} 
+
+                                /* ----------- ШИРИНА - 578 PX ---------------*/
+
+@media (max-width: 578px) {
+  .container{
+    width: 90%;
+  }
+  .play {
+    margin-left: 7%;
+  }
+  .search{
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 5%;
+  }
+  .header{
+    flex-wrap: wrap;
+  }
+  .content{
+    flex-wrap: wrap;
+  }
+  .actors-list, .actors-title{
+    display: none;
+  }
+  .short-info{
+    margin-bottom: 10px;
+  }
+  .movie-info{
+    flex-wrap: wrap;
+  }
+  body{
+    background-size: 215%;
+  }
+}
+
+                                /* ----------- ШИРИНА - 550 PX ---------------*/
+
+@media (max-width: 550px) {
+  .country{
+    margin-right: 0;
+  }
+  .button{
+    margin-bottom: 10px;
+  }
+  .poster{
+    margin-top: -20%;
+  }
+  .play{
+    margin-left: 0px;
+    margin-top: 5%;
+    flex-basis: 100%;
+    margin-bottom: 5%;
+  }
+
+}
+
+@media (max-width: 480px){
+  .play{
+    margin-bottom: 10%;
+  }
+  .search-button {
+    padding: 0;
+    padding-left: 16px;
+  }
+  body{
+    background-size: 270%;
+  }
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .poster{
+    display: inline-block;
+    width: 100%;
+    margin-top: -15%;
+  }
+  .short-info{
+    margin-right: 0;
+  }
+  .button{
+    width: 100%;
+  }
+  .tabs-item:not(:last-child) {
+    display: block;
+    flex-basis: 100%;
+  }
+  .tabs-item:nth-child(8n) {
+    display: none;
+  }
+  .tabs{
+    margin-bottom: 8%;
+    padding-left: 3px;
+  }
+
+  .subscrible-title{ 
+    margin-left: 20px;
+    font-size: 19px;
+  }
+  .banner{
+    display: inline-block;
+    width: 94%;
+    margin-left: 20px;
+  }
+  .subscribe-input{
+    padding-right: 10px;
+    margin-left: 20px;
+    width: 217px;
+  }
+}
+
+                                /* ----------- ШИРИНА - 480 PX ---------------*/
+
+@media (max-width: 370px){
+  .play{
+    margin-bottom: 10%;
+  }
+  .search-button {
+    padding: 0;
+    padding-left: 16px;
+  }
+  body{
+    background-size: 270%;
+  }
+  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .poster{
+    display: inline-block;
+    width: 100%;
+    margin-top: -15%;
+  }
+  .short-info{
+    margin-right: 0;
+  }
+  .button{
+    width: 100%;
+  }
+  .tabs-item:not(:last-child) {
+    display: block;
+    flex-basis: 100%;
+  }
+  .tabs-item:nth-child(8n) {
+    display: none;
+  }
+  .tabs{
+    margin-bottom: 8%;
+    padding-left: 3px;
+  }
+  .subscrible-title{ 
+    margin-left: 18px;
+  }
+  .banner{
+    display: inline-block;
+    width: 96%;
+    margin-left: 10px;
+  }
+  .subscribe-input{
+    padding-right: 10px;
+    margin-left: 10px;
+  }
+} 
